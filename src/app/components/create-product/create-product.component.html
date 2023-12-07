@@ -1,0 +1,37 @@
+<form [formGroup]="form" (ngSubmit)="submit()">
+
+    <input
+            type="text"
+            class="border w-full py-2 px-4 mb-2"
+            placeholder="Product name"
+            formControlName="title"
+            appFocus
+    >
+
+    <p class="text-red-600 font-medium mb-2" *ngIf="title.errors?.required && title.touched">
+        Name is required
+    </p>
+
+    <input
+            type="number"
+            class="border w-full py-2 px-4 mb-2"
+            placeholder="Price"
+            formControlName="price"
+    >
+
+    <p class="text-red-600 font-medium mb-2" *ngIf="price.errors?.required && price.touched">
+        Price is required
+    </p>
+
+    <input
+            type="text"
+            class="border w-full py-2 px-4 mb-2"
+            placeholder="Description"
+            formControlName="description"
+    >
+
+
+    <button type="submit" class="py-2 px-4 bg-blue-600 text-white">
+        Create
+    </button>
+</form>

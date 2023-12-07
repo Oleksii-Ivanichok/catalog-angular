@@ -2,6 +2,8 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
+    "noPropertyAccessFromIndexSignature": false,
+    "strictPropertyInitialization": false,
     "outDir": "./dist/out-tsc",
     "esModuleInterop": true,
     "sourceMap": true,
